@@ -19,8 +19,4 @@
             </classpath>
         </java>
     </target>
-    <target name="clean">
-        <delete dir="classes" quiet="true"/>
-        <mkdir dir="classes"/>
-    </target>
 </project>
