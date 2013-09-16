@@ -19,12 +19,4 @@
             </classpath>
         </java>
     </target>
-    <target name="echo_before">
-      <echo message="Before"/>
-    </target>
-    <target name="echo_after">
-      <echo message="After"/>
-    </target>
-    <target name="compose" depends="echo_before,compile,echo_after">
-    </target>
 </project>
