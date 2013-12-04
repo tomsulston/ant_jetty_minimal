@@ -12,11 +12,20 @@
         </javac>
     </target>
     <target name="run" depends="compile">
+        <exec executable="pkill">
+                 <arg value="-f"/>
+                 <arg value="site.Bootstrap"/>
+        </exec>
         <java classname="site.Bootstrap" fork="true"
             classpathref="class.path">
             <classpath>
                 <pathelement location="classes/"/>
             </classpath>
         </java>
+        <sleep seconds="2"/>
+    </target>
+
+    <target name="test" depends="run">
+        <fail/>
     </target>
 </project>
