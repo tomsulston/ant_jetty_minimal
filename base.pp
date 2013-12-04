@@ -8,7 +8,7 @@ node 'build' inherits default {
   package { "openjdk-6-jdk" :
         ensure => "latest"
   }
-  package { "git" :
+  package { "git-core" :
         ensure => "latest"
   }
   package { "ant" :
@@ -17,7 +17,7 @@ node 'build' inherits default {
   package { "libwagon-java" :
         ensure => "latest"
   }
-  package { "maven" :
+  package { "maven2" :
         ensure => "latest"
   }
 }
