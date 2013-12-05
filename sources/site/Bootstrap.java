@@ -9,7 +9,13 @@ import org.eclipse.jetty.server.handler.*;
 
 class Bootstrap {
     public static void main(String[] args) throws Exception {
-        Server server = new Server(9090);
+        int port = 9090;
+
+        if (System.getenv().get("APP_PORT") != null) {
+            port = Integer.parseInt(System.getenv().get("APP_PORT"));
+        }
+
+        Server server = new Server(port);
         server.setHandler(new ResourceHandler() {
             {
                 setResourceBase("static");
